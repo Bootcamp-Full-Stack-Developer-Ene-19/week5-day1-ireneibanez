@@ -156,7 +156,7 @@ function moveWest() {
 
 function checkObstacle(x, y) {
    
-    if (map[y][x] === 1){
+    if ((map.length < x && map[x].length < y) || map[y][x] === 1){
         return true;
     }
     return false;
