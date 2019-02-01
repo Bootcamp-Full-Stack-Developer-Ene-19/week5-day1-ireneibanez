@@ -154,9 +154,8 @@ function moveWest() {
 }
 // Función que comprueba, dadas las coordenadas del personaje, si existe un obstaculo (valor 1) en esa celda del array
 
-function checkObstacle(x, y) {
-   
-    if ((map.length < x && map[x].length < y) || map[y][x] === 1){
+function checkObstacle(x, y) {    
+    if ((map.length < y || y < 0 || x < 0 || map[y].length < x) || map[y][x] === 1){
         return true;
     }
     return false;
